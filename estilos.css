@@ -1,0 +1,272 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+	background-size: cover;
+
+}
+.grid_container{
+	display: grid;
+	grid-template: 
+	"header" 100px
+	"navbar" 50px
+	"main"	auto
+	"footer" 100px;
+}
+.header{
+	grid-area: header;
+	background-color: #ffffff;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+	background-color: #eeba97;
+	background-size: cover;
+
+}
+.header{
+	grid-area: header;
+}
+.logo{
+	margin-top: 2px;
+	width: 100px;
+	height: 95px;
+	display: flex;
+	justify-content: flex-start;
+	
+}
+
+.navbar{
+	grid-area: navbar;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding-right: 150px;
+	background-color: #ffffff;
+
+}
+
+.segpag{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+	color: #030303;
+	padding: 0.45cm;
+	border-radius: 1cm;
+	border: 1cm;
+	background-color: #eeba97;
+}
+.pagina:hover{
+	color: #000000;
+	background-color: #eeba97;
+}
+.equipo{
+	grid-area: equipo;
+	display: grid;
+	grid-template: 
+	"titulo" 85px
+	"ariel" 175px
+	"texto1" 70px
+	"eric" 175px
+	"texto2" 70px
+	"sebastian" 175px
+	"texto3" 70px
+	"flounder" 175px
+	"texto4" 70px /
+	1fr		;
+	margin-bottom: 1cm;
+}
+.main{
+	grid-area: main;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 1em;
+	display: grid;
+	grid-template: 
+	"nosotros" 1fr
+	"equipo"  auto /
+	100%;
+}
+.nosotros{
+	grid-area: nosotros;
+	background-color: #eeba97;
+	margin-top: 0.5cm;
+	display: grid;
+	grid-template:
+	"foto" auto
+	"texto" 400px;
+}
+.nosotros img{
+	width: 100%;
+	grid-area: foto;
+}
+.subtitulo1{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 3.6cm;
+}
+.texto1{
+	grid-area: texto;
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1cm;
+	color: #000000;
+	
+}
+
+.txt2{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #000000;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 0.5cm;
+}
+.fotosp{
+	height: 175px;
+}
+.carnes{
+	grid-area: ariel;
+}
+.cerdo{
+	grid-area: eric;
+}
+.huevos{
+	grid-area: sebastian;
+}
+.pollo{
+	grid-area: flounder;
+}
+
+.footer{
+	grid-area: footer;
+	display: grid;
+	grid-template: 
+	"logo	links" 1fr /
+	100px	auto;
+	align-items: center;
+	justify-items: end;
+	align-content: center;
+	
+	background-color: #ffffff;
+}
+.logofinal{
+	grid-area: logo;
+	width: 80px;
+	height: 75px;
+}
+.links{
+	grid-area: links;
+	margin-right: 30px;
+
+}
+.tw1{
+	width: 50px;
+	height: 55px;
+}
+.ig2{
+	width: 50px;
+	height: 55px;
+}
+
+.lfooter{
+	width: 80px;
+	height: 90px;
+}
+.red1{
+	width: 60px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.grid_container{
+		grid-template: 
+		"header 	navbar" 	100px 
+		"main	 	main" 		auto
+		"footer 	footer" 	100px /
+		200px 		auto;
+	}
+	.main{
+		font-size: 1.5em;
+	}
+	.txt2{
+		grid-area: titulo;
+		padding-left: 310px;
+	}
+	.equipo{
+		grid-area: equipo;
+		display: grid;
+		grid-template: 
+		"titulo		titulo" 85px
+		"carnes		cerdo" 175px
+		"texto1		texto2" 70px
+		"huevos	    pollo" 175px
+		"texto3		texto4" 70px /
+		1fr			1fr;
+		margin-bottom: 1cm;
+	}
+	.navbar{
+		margin-left: 3cm;
+	}
+}
+
+@media (min-width:1200px) {
+	.grid_container{
+		width: 99.6%;
+		margin: auto;
+		grid-template: 
+		"header 	header 	navbar		navbar" 	100px
+		"main	 	main 	main		main" 		auto
+		"footer 	footer 	footer		footer" 	100px /
+		1fr 		1fr 	1fr			1fr;
+	}
+	body{
+		text-align: center;
+		min-height: 100%;
+		background-size: cover;
+	
+	}
+	.main{
+		font-size: 1.55em;
+	}
+	.nosotros{
+		grid-area: nosotros;
+		background-color: #eeba97;
+		margin-top: 0.5cm;
+		display: grid;
+		grid-template:
+		"foto	texto" auto /
+		1fr		1fr;
+	}
+	
+	.equipo{
+		grid-area: equipo;
+		display: grid;
+		grid-template: 
+		"titulo		titulo		titulo		titulo" 85px
+		"ariel		eric		sebastian	flounder" 175px
+		"texto		texto		texto		texto" 70px /
+		1fr			1fr			1fr			1fr	;
+		margin-bottom: 1cm;
+	}
+	.txt2{
+		grid-area: titulo;
+		padding-left: 800px;
+	}
+	.footer{
+		background-color: rgb(255, 255, 255);
+		width: 100%;
+	}
+
+}
